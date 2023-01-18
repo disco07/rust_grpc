@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calculator;
+
+message CalculatorRequest {
+  int64 number_one = 1;
+  int64 number_two = 2;
+}
+
+message CalculatorResponse {
+  int64 result = 1;
+}
+
+service Calculator {
+  rpc Sum(CalculatorRequest) returns (CalculatorResponse) {}
+}
